@@ -35,3 +35,4 @@ class Post(object):
 
     @staticmethod
     def from_blog(id):
+        return [post for pos in Database.find(collection = 'posts', query = {'blog_id: id'})]
